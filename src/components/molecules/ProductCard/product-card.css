@@ -1,6 +1,5 @@
 .container {
   display: flex;
-  justify-content: space-between;
   align-items: start;
   gap: 15px;
 }
@@ -8,7 +7,6 @@
 .image {
   height: 35px;
   width: 35px;
-  border: 1px solid;
 }
 
 .details-container {
@@ -22,10 +20,20 @@
   line-height: 150%;
   letter-spacing: 0.5px;
   flex-grow: 1;
+  max-width: 70%;
+  margin-right: auto;
 }
 
 .action-btn {
   height: 18px;
   width: 18px;
   border: 1px solid;
+  cursor: pointer;
+}
+
+.title,
+.price {
+  max-width: 40%;
+  max-height: 20px;
+  overflow: hidden;
 }

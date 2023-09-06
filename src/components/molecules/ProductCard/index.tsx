@@ -7,6 +7,8 @@ type Props = {
   title: string;
   price: number;
   currency?: string;
+  image?: string;
+  onClick: any;
 };
 
 const CatalogProduct: FunctionComponent<Props> = ({
@@ -14,11 +16,13 @@ const CatalogProduct: FunctionComponent<Props> = ({
   title,
   price,
   currency = '$',
+  image,
+  onClick,
 }) => {
   return (
     <Card>
       <div className="container">
-        <div className="image"></div>
+        <img src={image} alt="" className="image" />
         <div className="details-container">
           <div className="code">{id}</div>
           <div className="title">{title}</div>
@@ -27,7 +31,7 @@ const CatalogProduct: FunctionComponent<Props> = ({
             {price}
           </div>
         </div>
-        <div className="action-btn"></div>
+        <div className="action-btn" onClick={() => onClick(id)}></div>
       </div>
     </Card>
   );

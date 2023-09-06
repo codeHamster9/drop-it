@@ -1,0 +1,16 @@
+.catalog-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.main-title {
+  color: #565c70;
+  border-bottom: 1px solid #565c70;
+  padding: 10px 0;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0.5px;
+}
