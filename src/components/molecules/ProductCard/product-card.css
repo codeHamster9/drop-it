@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 15px;
+}
+
+.image {
+  height: 35px;
+  width: 35px;
+  border: 1px solid;
+}
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  color: #909090;
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.5px;
+  flex-grow: 1;
+}
+
+.action-btn {
+  height: 18px;
+  width: 18px;
+  border: 1px solid;
+}
