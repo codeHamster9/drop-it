@@ -1,24 +1,18 @@
-import { FunctionComponent } from 'react';
-import Card from '../../atoms/Card';
-import './product-card.css';
+import { FunctionComponent } from "react";
+import Card from "../../atoms/Card";
+import "./product-card.css";
+import { useDispatch } from "react-redux";
+import { addProduct } from "../../../store/cart/cartSlice";
+import { Product } from "../../../types/Product";
 
-type Props = {
-  id: string;
-  title: string;
-  price: number;
-  currency?: string;
-  image?: string;
-  onClick: any;
-};
-
-const CatalogProduct: FunctionComponent<Props> = ({
+const CatalogProduct: FunctionComponent<Product> = ({
   id,
   title,
   price,
-  currency = '$',
+  currency = "$",
   image,
-  onClick,
 }) => {
+  const dispatch = useDispatch();
   return (
     <Card>
       <div className="container">
@@ -31,7 +25,11 @@ const CatalogProduct: FunctionComponent<Props> = ({
             {price}
           </div>
         </div>
-        <div className="action-btn" onClick={() => onClick(id)}></div>
+        <div
+          className="action-btn"
+          onClick={() =>
+            dispatch(addProduct({ id, title, price, image }))
+          }></div>
       </div>
     </Card>
   );

@@ -1,14 +1,12 @@
-import ProductCard from '../../molecules/ProductCard';
-import './product-list.css';
+import ProductCard from "../../molecules/ProductCard";
+import "./product-list.css";
 
-const ProductList = ({ products, onClick }) => {
+const ProductList = ({ products }) => {
   return (
     <div className="products-container">
       {products.length
-        ? products.map((product) => (
-            <ProductCard {...product} onClick={onClick} />
-          ))
-        : 'Loading...'}
+        ? products.map((product, key) => <ProductCard {...product} key={key} />)
+        : "Loading..."}
     </div>
   );
 };
